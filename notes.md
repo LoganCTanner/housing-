@@ -25,8 +25,12 @@ home = house/apartment
 ## solution
 
 ### distance
+- for home in homes
+  - if not nearby(location) remove home from homes
 
 ### density
+- for home in homes
+  - if responses for nearby(location) less than densityRequirement remove home from homes
 
 #### nearby 
 - convert home address to latlong
