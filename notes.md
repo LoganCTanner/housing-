@@ -1,26 +1,33 @@
 # concept
 home = house/apartment
-- spacetime distance
+- distance
   - display homes within X miles of {location}
-  - display homes within X minutes of {location}
 - density
-  - display number of {location} within X spacetime distance
-  - display homes with at least X {location} within Y spacetime distance
-- 
+  - display homes with at least X {location} within distance
+- nearby
+  - display number of {location} within X distance
+
 
 ## resources needed
 
-### housing apis
+### homes apis
 - zillow
+  - houses
+  - apartments
 - apartments.com
 - (other?)
 
-### google maps api
+### google maps apis
 - places api
 - distance matrix API
 
 
 ## solution
-### spacetime distance
 
-### 
+### distance
+
+### density
+
+#### nearby 
+- convert home address to latlong
+- request 
