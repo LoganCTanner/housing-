@@ -10,7 +10,7 @@ home = house/apartment
 
 ## resources needed
 
-### homes apis
+### scraped data
 - zillow
   - houses
   - apartments
@@ -26,12 +26,14 @@ home = house/apartment
 
 ### distance
 - for home in homes
-  - if not nearby(location) remove home from homes
+  - if density none remove home from homes
 
 ### density
 - for home in homes
   - if responses for nearby(location) less than densityRequirement remove home from homes
 
-#### nearby 
+### nearby 
 - convert home address to latlong
-- request 
+- convert distance to meters
+- request google places api (lat, long, meters)
+- return {#responses, responses}
