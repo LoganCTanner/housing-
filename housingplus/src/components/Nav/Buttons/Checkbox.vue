@@ -1,6 +1,8 @@
 <!-- -->
 <sciprt lang="ts">
-
+    import { defineComponent } from 'vue'
+    export default defineComponent({
+        });
 
 </sciprt>
 

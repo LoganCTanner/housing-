@@ -1,12 +1,41 @@
 <!-- -->
-<sciprt lang="ts">
-
-
-</sciprt>
-
+<script lang="ts">
+import {defineComponent} from 'vue'
+import NavButton from './NavButton.vue'
+import SaleTypeMenu from './Menus/SaleTypeMenu.vue'
+export default defineComponent({
+    components: { NavButton, SaleTypeMenu },
+    props: {
+        currentlyOpen: String
+    },
+    data: () =>({
+        name: 'SaleType',
+    }),
+    computed: {
+        opened() {
+            return this.currentlyOpen === this.name
+        }
+    },
+    methods: {
+        toggled(isOpen:boolean){
+            this.$emit('open', isOpen, this.name)
+        }
+    }
+})
+</script>
 <!-- -->
 <template>
+
     <div class="SaleTypeButton">
+        <NavButton 
+        title="Sale Type" 
+        currentlyOpen = "currentlyOpen"
+        :open="opened"
+        @toggled="toggled"/>
+
+        <div v-if="opened">
+            <SaleTypeMenu />
+        </div>
 
     </div>
     
@@ -21,18 +50,17 @@
 
  -->
 <style scoped>
-    .SaleTypeButton {
-        height: 44px;
-        width: 131px;
-        
-        background-color: #f2faff;
-        border-color:#006aff;
-
-        border-width:1px;
-        border-style: solid;
-        border-radius: 10px;
+    .SaleTypeButton{
+        width:131px;
+        height: 100%
     }
 
+    .SaleTypeMenu {
+        width: 150px;
+        height: 225px;
 
+        background-color: wheat;
+        margin-top: 5px;
+    }
 
 </style>
