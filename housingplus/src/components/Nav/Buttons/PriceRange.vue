@@ -2,8 +2,10 @@
 <script lang="ts">
 import {defineComponent} from 'vue'
 import NavButton from './NavButton.vue'
+import PriceRangeMenu from './Menus/PriceRangeMenu.vue'
+
 export default defineComponent({
-    components: { NavButton },
+    components: { NavButton, PriceRangeMenu },
     props: {
         currentlyOpen: String
     },
@@ -32,8 +34,8 @@ export default defineComponent({
         :open="opened"
         @toggled="toggled"/>
 
-        <div v-if="opened">
-            <div class="PriceRangeMenu"></div>
+        <div v-show="opened">
+            <PriceRangeMenu />
         </div>
     </div>
 </template>
@@ -45,11 +47,5 @@ export default defineComponent({
     height:100%;
 }
 
-.PriceRangeMenu {
-        width: 150px;
-        height: 225px;
 
-        background-color: wheat;
-        margin-top: 5px;
-}
 </style>

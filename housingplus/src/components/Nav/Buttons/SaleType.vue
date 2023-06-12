@@ -33,7 +33,7 @@ export default defineComponent({
         :open="opened"
         @toggled="toggled"/>
 
-        <div v-if="opened">
+        <div v-show="opened">
             <SaleTypeMenu />
         </div>
 
@@ -55,12 +55,5 @@ export default defineComponent({
         height: 100%
     }
 
-    .SaleTypeMenu {
-        width: 150px;
-        height: 225px;
-
-        background-color: wheat;
-        margin-top: 5px;
-    }
 
 </style>

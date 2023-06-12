@@ -28,16 +28,16 @@ export default defineComponent({
     height:25px;
     width:25px;
 
-    background-color: grey;
-    border-color: yellow;
+    background-color: lightgray;
+    border-color: darkgray;
 
     border-radius: 25px;
     border-width: 10px;
     border-style:solid;
 }
 .selected {
-    background-color:blue;
-    border-color:yellow;
+    background-color:lightskyblue;
+    border-color:blue;
 }
 
 </style>
