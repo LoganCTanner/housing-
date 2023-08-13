@@ -1,10 +1,9 @@
 # hello, user
 
-## wtf is this?
+## what is this?
 
 ### more relevant search tools
-1) within X miles of walmart
-2) within x miles of {location}
+- Allows users to search homes for sale that are nearby their favorite locations
 
 ## where can I use?
 run locally or go [here]() if there's a site up
